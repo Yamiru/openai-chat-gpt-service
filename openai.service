@@ -1,0 +1,10 @@
+[Unit]
+Description=openai
+
+[Service]
+User=opc
+WorkingDirectory=/opt/discord_bot/
+ExecStart=/bin/bash -c 'cd /opt/discord_bot && sudo node bot.js'
+
+[Install]
+WantedBy=multi-user.target
